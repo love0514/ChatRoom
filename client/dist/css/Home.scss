@@ -1,0 +1,117 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ChatRoomContainer {
+    width: 80%;
+    height: 90%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ChatRoomContent {
+        width: 95%;
+        flex: 0 0 65%;
+        background: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding:1%;
+        .ChatContentList{
+            width:98%;
+            flex:0 0 25px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 16px;
+            span{
+                font-size: 10px;
+                margin-left:1%;
+            }
+        }
+    }
+
+    .ChatRoomContent::-webkit-scrollbar {
+        display: none;
+    }
+
+    .InputBox {
+        width: 95%;
+        flex: 0 0 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .inputName {
+            width: 20%;
+            flex: 0 0 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 95%;
+                height: 50%;
+                border-radius: 5px;
+                text-align: center;
+                border: 2px solid #eee;
+            }
+
+            input::placeholder {
+                color: rgb(200, 200, 200);
+            }
+        }
+
+        .inputMessage {
+            width: 60%;
+            flex: 0 0 60%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 95%;
+                height: 50%;
+                border-radius: 5px;
+                text-align: center;
+                border: 2px solid #eee;
+            }
+
+            input::placeholder {
+                color: rgb(200, 200, 200);
+            }
+        }
+
+        .submit {
+            width: 20%;
+            flex: 0 0 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .send {
+                width: 95%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid #EEE;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

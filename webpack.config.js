@@ -2,10 +2,10 @@ const webpack = require('webpack');
 var path = require('path');
 module.exports = {
     entry: {
-        main: path.join(__dirname, './src/main.js'),
+        main: path.join(__dirname, './client/src/main.js'),
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './client/dist'),
         publicPath: '/',
         filename: 'js/[name].js'
     },
@@ -29,10 +29,10 @@ module.exports = {
     plugins: [
         new webpack.DllReferencePlugin({
             context: '.',
-            manifest: require("./dist/vendor.manifest.json"),
+            manifest: require("./client//dist/vendor.manifest.json"),
         }),
     ], devServer: {
-        contentBase: path.resolve(__dirname, "dist"),
+        contentBase: path.resolve(__dirname, "./client/dist"),
         historyApiFallback: {
             // rewrites:[
             //     {from:/./,to:'./index.html'}
@@ -41,7 +41,7 @@ module.exports = {
         host:"192.168.1.161",
         // https:true,
         inline: true,
-        port: 8000,
+        port: 8001,
         open: true
     }
 };
